@@ -70,34 +70,34 @@ module.exports = function (kibana) {
 
       links: [{
         id: 'kibana:discover',
-        title: 'Discover',
+        title: '数据分析',
         order: -1003,
         url: kbnBaseUrl + '#/discover',
         description: 'interactively explore your data',
         icon: 'plugins/kibana/assets/discover.svg'
       }, {
         id: 'kibana:visualize',
-        title: 'Visualize',
+        title: '可视化图表',
         order: -1002,
         url: kbnBaseUrl + '#/visualize',
         description: 'design data visualizations',
         icon: 'plugins/kibana/assets/visualize.svg'
       }, {
         id: 'kibana:dashboard',
-        title: 'Dashboard',
+        title: '仪表盘',
         order: -1001,
         url: kbnBaseUrl + '#/dashboard',
         description: 'compose visualizations for much win',
         icon: 'plugins/kibana/assets/dashboard.svg'
       }, {
-        title: 'Dev Tools',
+        title: '开发工具',
         order: 9001,
         url: '/app/kibana#/dev_tools',
         description: 'development tools',
         icon: 'plugins/kibana/assets/wrench.svg'
       }, {
         id: 'kibana:management',
-        title: 'Management',
+        title: '管理',
         order: 9003,
         url: kbnBaseUrl + '#/management',
         description: 'define index patterns, change config, and more',
