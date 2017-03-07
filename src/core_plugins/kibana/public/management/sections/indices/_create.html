@@ -3,7 +3,7 @@
     <div ng-controller="managementIndicesCreate" class="kbn-management-indices-create">
       <div class="page-header">
         <h1>配置一个索引</h1>
-        为了使用ZDOS，你必须至少配置一个索引。索引是在运行一个搜索和分析之前用来匹配es索引的，他们同时也用来设置字段。
+        为了使用KIBANA，你必须至少配置一个索引。索引是在运行一个搜索和分析之前用来匹配es索引的，他们同时也用来设置字段。
       </div>
       <div>
         <form name="form" role="form" class="well" ng-submit="createIndexPattern()">
@@ -28,7 +28,7 @@
                 我们 <strong>强烈 建议</strong> 用通配符模式做索引名，而不是时间间隔模式。
               </p>
               <p>
-                用通配符模式，ZDOS现在足够聪明来自动确定在当前时间范围内哪些索引被用来搜索。
+                用通配符模式，KIBANA现在足够聪明来自动确定在当前时间范围内哪些索引被用来搜索。
                 这意味着，现在通配符索引模式可以得到和时间间隔相同的性能优化。
               </p>
             </div>
@@ -63,7 +63,7 @@
               class="form-control">
               <small ng-show="index.nameInterval.name == 'weeks'">
                 <strong>注意： </strong>
-                我注意到您正在使用周索引。zdos要求您在您的索引创建时使用国际标准周。
+                我注意到您正在使用周索引。kibana要求您在您的索引创建时使用国际标准周。
                 看 <a href="https://en.wikipedia.org/wiki/ISO_week_date" target="_blank" title="Wikipedia: ISO Week Date">维基百科: 国际标准周</a>
               </small>
             </div>
@@ -77,7 +77,7 @@
             <div ng-if="index.notExpandable" class="alert alert-info">
               将直接查询此索引模式，而不是针对单个索引扩展为更高性能的搜索。
 
-              ZDOS将接收针对 <em>{{index.name}}</em> 的查询，并且将不得不搜索所有匹配的索引，而不管他们是否具有与当前时间范围相匹配的数据。
+              KIBANA将接收针对 <em>{{index.name}}</em> 的查询，并且将不得不搜索所有匹配的索引，而不管他们是否具有与当前时间范围相匹配的数据。
 
             </div>
 
@@ -86,7 +86,7 @@
             </p>
 
             <p class="help-block">
-               搜索针对<em>logstash-*</em>的索引模式时，将会查询zdos中属于当前时间范围内的特定匹配的索引(例如: <em>logstash-2015.12.21</em>)。
+               搜索针对<em>logstash-*</em>的索引模式时，将会查询elasticsearch中属于当前时间范围内的特定匹配的索引(例如: <em>logstash-2015.12.21</em>)。
             </p>
           </div>
 

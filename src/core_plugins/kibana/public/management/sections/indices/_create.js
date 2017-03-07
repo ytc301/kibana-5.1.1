@@ -89,7 +89,7 @@ uiModules.get('apps/management')
     })
     .catch(function (err) {
       if (err instanceof IndexPatternMissingIndices) {
-        notify.error('找不到与该模式匹配的任何索引，请将该索引添加到ZDOS中。');
+        notify.error('找不到与该模式匹配的任何索引，请将该索引添加到elasticsearch中。');
       }
       else notify.fatal(err);
     });

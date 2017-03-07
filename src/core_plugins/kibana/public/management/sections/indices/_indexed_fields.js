@@ -25,10 +25,10 @@ uiModules.get('apps/management')
         { title: 'name' },
         { title: 'type' },
         { title: 'format' },
-        { title: 'searchable', info: 'These fields can be used in the filter bar' },
-        { title: 'aggregatable' , info: 'These fields can be used in visualization aggregations' },
-        { title: 'analyzed', info: 'Analyzed fields may require extra memory to visualize' },
-        { title: 'excluded', info: 'Fields that are excluded from _source when it is fetched' },
+        { title: 'searchable', info: '这些字段可以在过滤器栏中使用' },
+        { title: 'aggregatable' , info: '这些字段可以用于可视化聚合' },
+        { title: 'analyzed', info: '被分析的字段可能需要额外的内存来可视化' },
+        { title: 'excluded', info: '获取时从_source中排除的字段' },
         { title: 'controls', sortable: false }
       ];
 

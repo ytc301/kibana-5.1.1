@@ -1,13 +1,8 @@
 <kbn-management-app section="kibana">
   <kbn-management-advanced class="container-fluid">
     <div class="bs-callout bs-callout-warning">
-      <h4>Caution: You can break stuff here</h4>
-      Be careful in here, these settings are for very advanced users only.
-      Tweaks you make here can break large portions of Kibana. Some of these
-      settings may be undocumented, unsupported or experimental. If a field has
-      a default value, blanking the field will reset it to its default which
-      may be unacceptable given other configuration directives. Deleting a
-      custom setting will permanently remove it from Kibana's config.
+      <h4>注意：你可能会在这里破坏一些东西</h4>
+      在这里要小心，这些设置仅适用于非常高级的用户。 你在这里调整可以打破大部分的Kibana。 这些设置中的一些可能未记录，不支持或实验性。 如果字段具有默认值，则空白字段将将其重置为其默认值，这对于其他配置指令可能是不可接受的。 删除自定义设置会将其从Kibana的配置中永久删除。
     </div>
     <form role="form">
       <input aria-label="Filter" ng-model="advancedFilter" class="form-control span12" type="text" placeholder="Filter"/>
@@ -15,9 +10,9 @@
     <table class="table">
       <thead>
         <tr>
-          <th class="col-xs-4 col-sm-4">Name</th>
-          <th class="col-xs-4 col-sm-5">Value</th>
-          <th class="col-xs-3 col-sm-2">Actions <kbn-info info="Edit or restore the default value."></kbn-info></th>
+          <th class="col-xs-4 col-sm-4">名称</th>
+          <th class="col-xs-4 col-sm-5">值</th>
+          <th class="col-xs-3 col-sm-2">动作 <kbn-info info="Edit or restore the default value."></kbn-info></th>
         </tr>
       </thead>
       <tbody>

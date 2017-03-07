@@ -10,29 +10,25 @@
         </kbn-management-index-header>
 
         <p>
-          This page lists every field in the <strong>{{::indexPattern.id}}</strong>
-          index and the field's associated core type as recorded by Elasticsearch.
-          While this list allows you to view the core type of each field, changing
-          field types must be done using Elasticsearch's
+          此页面列出了<strong>{{::indexPattern.id}}</strong>索引中的每个字段以及由elasticsearch记录的字段的关联核心类型。虽然此列表允许你查看每个字段的核心类型，但必须使用elasticsearch的映射API来更改字段类型。
           <a target="_window" href="http://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html">
-            Mapping API
+            映射API
             <i aria-hidden="true" class="fa-link fa"></i>
           </a>
         </p>
         <div ng-if="indexPattern.timeFieldName && indexPattern.intervalName" class="alert alert-info">
-          This index uses a <strong>Time-based index pattern</strong> which repeats <span ng-bind="::indexPattern.getInterval().display"></span>
+          此索引重复使用<strong>基于时间的索引模式</strong>  <span ng-bind="::indexPattern.getInterval().display"></span>
         </div>
         <div ng-if="!indexPattern.canExpandIndices()" class="alert alert-info">
-          This index pattern is set to be queried directly rather than being
-          expanded into more performant searches against individual indices.
+          此索引模式设置为直接查询，而不是针对单个索引扩展为更高性能的搜索。
         </div>
         <div ng-if="conflictFields.length" class="alert alert-warning">
-          <strong>Mapping conflict!</strong> {{conflictFields.length > 1 ? conflictFields.length : 'A'}} field{{conflictFields.length > 1 ? 's' : ''}} {{conflictFields.length > 1 ? 'are' : 'is'}} defined as several types (string, integer, etc) across the indices that match this pattern. You may still be able to use these conflict fields in parts of Kibana, but they will be unavailable for functions that require Kibana to know their type. Correcting this issue will require reindexing your data.
+          <strong>映射冲突！</strong> {{conflictFields.length > 1 ? conflictFields.length : 'A'}} 字段{{conflictFields.length > 1 ? 's' : ''}} {{conflictFields.length > 1 ? 'are' : 'is'}} 在匹配此模式的索引之间定义为几种类型（字符串，整数等）。您依然可以在kibana的某些部分中使用这些冲突字段，但他们不能用于需要kibana知道其类型的函数。更正此问题需要重新索引您的数据。
         </div>
       </div>
 
       <form role="form">
-        <input aria-label="Filter" ng-model="fieldFilter" class="form-control span12" type="text" placeholder="Filter" />
+        <input aria-label="Filter" ng-model="fieldFilter" class="form-control span12" type="text" placeholder="过滤" />
       </form>
 
       <br />

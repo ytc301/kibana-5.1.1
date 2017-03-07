@@ -1,11 +1,11 @@
-<h3>Source Filters</h3>
+<h3>源过滤器</h3>
 
 <p>
-  Source filters can be used to exclude one or more fields when fetching the document source. This happens when viewing a document in the Discover app, or with a table displaying results from a saved search in the Dashboard app. Each row is built using the source of a single document, and if you have documents with large or unimportant fields you may benefit from filtering those out at this lower level.
+源过滤器可用于在提取文档源时排除一个或多个字段。 当在发现应用程式中查看文件时，或是在资讯主页应用程式中显示已储存搜寻结果的表格时，就会发生这种情况。 每行使用单个文档的源代码构建，如果您的文档具有大或不重要的字段，您可以从这个较低级别筛选出来。
 </p>
 
 <p>
-  Note that multi-fields will incorrectly appear as matches in the table below. These filters only actually apply to fields in the original source document, so matching multi-fields are not actually being filtered.
+请注意，多字段将在下表中错误地显示为匹配项。 这些过滤器仅实际应用于原始源文档中的字段，因此匹配的多字段实际上未被过滤。
 </p>
 
 <div ng-class="{ saving: sourceFilters.saving }" class="source-filters-container">
@@ -23,7 +23,7 @@
           type="submit"
           class="btn btn-primary"
           ng-disabled="!sourceFilters.newValue">
-          Add
+          增加
         </button>
       </div>
     </div>
