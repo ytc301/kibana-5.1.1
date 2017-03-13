@@ -6,10 +6,10 @@
       <!-- no results -->
       <div class="col-md-12" ng-if="status === 'notFound'">
           <div class="col-md-12">
-            <h1>Failed to locate document. <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
+            <h1>找不到文档。 <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
 
             <p>
-              Unfortunately I could not find any documents matching that id, of that type, in that index. I tried really hard. I wanted it to be there. Sometimes I swear documents grow legs and just walk out of the index. Sneaky. I wish I could offer some advice here, something to make you feel better
+              我在该索引中找不到该类型的文档，我真得很努力去找了，我也希望它就在那。我希望我能提供一些让你感觉更好的建议。
             </p>
 
           </div>
@@ -18,10 +18,10 @@
             <!-- no results -->
       <div class="col-md-12" ng-if="status === 'error'">
           <div class="col-md-12">
-            <h1>This is bad. <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
+            <h1>情况不妙 <i aria-hidden="true" class="fa fa-meh-o"></i></h1>
 
             <p>
-              Oh no. Something went very wrong. Its not just that I couldn't find your document, I couldn't even try. The index was missing, or the type. Go check out Elasticsearch, something isn't quite right here.
+              出现了大的问题，我不仅找不到你需要的文件，我甚至都不能找，索引缺失或者类型缺失？你去检查一下elasticsearch，估计它出问题了。
             </p>
 
           </div>

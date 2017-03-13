@@ -2,10 +2,10 @@
   <td class="name">
     <b>{{conf.name}}</b>
     <span class="smaller" ng-show="!conf.isCustom && conf.value !== undefined">
-      (Default: <i>{{conf.defVal == undefined || conf.defVal === '' ? 'null' : conf.defVal}}</i>)
+      (默认: <i>{{conf.defVal == undefined || conf.defVal === '' ? 'null' : conf.defVal}}</i>)
     </span>
     <span class="smaller" ng-show="conf.isCustom">
-      (Custom setting)
+      (自定义设置)
     </span>
     <br>
     <span class="smaller" ng-bind-html="conf.description | trustAsHtml"></span>
@@ -48,7 +48,7 @@
         elastic-textarea
         validate-json
       ></textarea>
-      <small ng-show="forms.configEdit.$error.jsonInput">Invalid JSON syntax</small>
+      <small ng-show="forms.configEdit.$error.jsonInput">无效的Json语法</small>
 
       <input
         ng-if="conf.array"
@@ -95,7 +95,7 @@
       aria-label="Edit"
       data-test-subj="advancedSetting-{{conf.name}}-editButton"
     >
-      <span class="sr-only">Edit</span>
+      <span class="sr-only">编辑</span>
       <i aria-hidden="true" class="fa fa-pencil"></i>
     </button>
 
@@ -107,7 +107,7 @@
       aria-label="Save"
       data-test-subj="advancedSetting-{{conf.name}}-saveButton"
     >
-      <span class="sr-only">Save</span>
+      <span class="sr-only">保存</span>
       <i aria-hidden="true" ng-if="!conf.loading" class="fa fa-save"></i>
       <i aria-hidden="true" ng-if="conf.loading" class="fa fa-spinner"></i>
     </button>
@@ -119,7 +119,7 @@
       class="btn btn-danger"
       aria-label="Clear"
     >
-      <span class="sr-only">Clear</span>
+      <span class="sr-only">清除</span>
       <i aria-hidden="true" class="fa fa-trash-o"></i>
     </button>
 
@@ -129,7 +129,7 @@
       class="btn btn-default"
       aria-label="Cancel edit"
     >
-      <span class="sr-only">Cancel Edit</span>
+      <span class="sr-only">取消编辑</span>
       <i aria-hidden="true" class="fa fa-times"></i>
     </button>
   </td>

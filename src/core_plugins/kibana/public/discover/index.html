@@ -76,7 +76,7 @@
           <!-- loading -->
           <div ng-show="resultState === 'loading'">
             <div class="discover-overlay">
-              <h2>Searching</h2>
+              <h2>搜索</h2>
               <div ng-show="fetchStatus">{{fetchStatus.complete}}/{{fetchStatus.total}}</div>
             </div>
           </div>
@@ -131,9 +131,9 @@
 
               <div ng-if="rows.length == opts.sampleSize" class="discover-table-footer">
                 <center>
-                  These are the first {{opts.sampleSize}} documents matching
-                  your search, refine your search to see others.
-                  <a ng-click="toTop()" title="Back to top">Back to top.</a>
+                  这些是匹配你的搜索第一次 {{opts.sampleSize}} 文档。
+                  优化你的搜索以查看其他。
+                  <a ng-click="toTop()" title="Back to top">回到顶部</a>
                 </center>
               </div>
             </div>

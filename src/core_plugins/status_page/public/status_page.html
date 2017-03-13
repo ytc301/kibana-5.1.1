@@ -16,20 +16,20 @@
   </div>
 
   <div class="row statuses_wrapper">
-    <h3>Status Breakdown</h3>
+    <h3>状态分解</h3>
 
     <div ng-if="!ui.statuses && ui.loading" class="statuses_loading">
       <span class="spinner"></span>
     </div>
 
     <h4 ng-if="!ui.statuses && !ui.loading" class="statuses_missing">
-      No status information available
+      没有有用的状态信息
     </h4>
 
     <table class="statuses" data-test-subj="statusBreakdown" ng-if="ui.statuses">
       <tr class="row">
         <th class="col-xs-4">ID</th>
-        <th class="col-xs-8">Status</th>
+        <th class="col-xs-8">状态</th>
       </tr>
       <tr
         ng-repeat="status in ui.statuses"
